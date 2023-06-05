@@ -1,1 +1,1 @@
-# Reloadly-API
+# ReloadlyAPI

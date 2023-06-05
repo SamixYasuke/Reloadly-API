@@ -1,0 +1,250 @@
+main{
+    margin: 50px auto;
+    width: calc(45rem);
+    display: grid;
+    grid-template-areas: 'a b';
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+
+
+.airtime-form{
+    margin: 60px auto;
+    background-color: rgb(239, 243, 243);
+    width: 40rem;
+    display: grid;
+    grid-template-areas: 'a b';
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.airtime-form input{
+    width: 70%;
+    padding: 12px 0;
+    margin: 30px auto;
+}
+
+.airtime-form select{
+    margin: 30px auto;
+    width: 70%;
+    padding: 12px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.airtime-form button{
+    margin: 0 auto;
+}
+
+.img-container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.transaction-confirmation{
+    display: grid;
+    background-color: aqua;
+    margin: 0 auto;
+    width: 500px;
+    grid-template-areas: 'a b';
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.gift-card{
+    cursor: pointer;
+}
+
+.confirmation-button{
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.giftCardHeader{
+    margin: 0 auto;
+    width: 700px;
+}
+
+.giftCardForm {
+  margin: 0 auto;
+  width: 550px;
+  display: grid;
+  grid-template-areas: 'a b';
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.buyGiftCardBtn {
+  margin: 0 auto;
+}
+
+.giftCardConfirmation{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.giftCardConfirmation img{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    object-fit: contain;
+}
+
+.giftCardConfirmation h1{
+    text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+    main{
+        gap: 30px;
+        width: calc(41.8rem);
+    }
+
+    .giftCardHeader{
+        margin: 0 auto;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    main{
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .airtime-form{
+        margin: 60px auto;
+        background-color: rgb(239, 243, 243);
+        width: 30rem;
+        display: grid;
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .airtime-form input{
+        width: 70%;
+        padding: 12px 0;
+        margin: 30px auto;
+    }
+    
+    .airtime-form select{
+        margin: 30px auto;
+        width: 70%;
+        padding: 12px 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .giftCardHeader{
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .giftCardForm{
+        margin: 0 auto;
+        width: 450px;
+        display: grid;
+        grid-template-areas: 'a b';
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .airtime-form{
+        margin: 60px auto;
+        background-color: rgb(239, 243, 243);
+        width: 20rem;
+        display: grid;
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .airtime-form input{
+        width: 70%;
+        padding: 12px 0;
+        margin: 30px auto;
+    }
+    
+    .airtime-form select{
+        margin: 30px auto;
+        width: 70%;
+        padding: 12px 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .img-container img{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+    }
+    
+    .transaction-confirmation{
+        display: grid;
+        margin: 0 auto;
+        width: 300px;
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .giftCardHeader{
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .giftCardForm{
+        margin: 0 auto;
+        width: 70%;
+        display: grid;
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .card{
+        width: 17rem!important;
+    }
+    main{
+        width: 17rem;
+    }
+    .airtime-form{
+        margin: 60px auto;
+        background-color: rgb(239, 243, 243);
+        width: 17rem;
+        display: grid;
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .transaction-confirmation{
+        display: grid;
+        background-color: aqua;
+        margin: 0 auto;
+        width: 200px;
+        grid-template-areas: 'a';
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .confirmation-button{
+        margin: 0 auto;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+

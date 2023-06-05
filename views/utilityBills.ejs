@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cindel Toply Gift Cards</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="javascript/index.js" defer></script>
+    <title>Cindel Top-ly Utility Bills</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="/" class="display-6 text-decoration-none text-dark"
+          >CINDEL TOPLY</a
+        >
+        <div>
+          <a href="#" class="btn btn-outline-dark mx-4">NILL</a>
+        </div>
+      </div>
+    </nav>
+    <form action="/utilityBill" method="post" class="giftCardForm">
+        <input type="number" name="utilityBillAmount" placeholder="Enter Payment amount" />
+        <input type="number" name="utilityBillerID" placeholder="Enter Payment ID of your biller" />
+        <input
+          type="number"
+          name="utilityBillSuscriberNumber"
+          placeholder="Enter The your suscriber number"
+        />
+        <p class="text-danger">
+          NOTE: If you enter an amount that's not in the range of Minimum Purchase Amount and Maximum Purchase Amount, the purchase would fail!!!!
+        </p>
+        <button
+          type="submit"
+          class="btn btn-outline-dark w-75 buyGiftCardBtn mb-5"
+        >
+          CONTINUE PAYMENT
+        </button>
+      </form>
+    <main>
+        <%utilityBillers.forEach((biller)=>{%>
+            <div class="card" style="width: 20rem">
+                <div class="card-body">
+                  <h5 class="card-title">Biller Name: <%=biller.name%></h5>
+                  <p class="card-text">Payment ID: <%=biller.id%></p>
+                  <p class="card-text">Country: <%=biller.countryName%></p>
+                  <p class="card-text">Service Type: <%=biller.type%></p>
+                  <p class="card-text">Payment Type: <%=biller.type%></p>
+                  <p class="card-text">Minimum Purchase Amount: <%=biller.minInternationalTransactionAmount%> <%=biller.internationalTransactionFeeCurrencyCode%></p>
+                  <p class="card-text">Maximum Purchase Amount: <%=biller.maxInternationalTransactionAmount%> <%=biller.internationalTransactionFeeCurrencyCode%></p>
+                  <p class="card-text">Local Transaction Fee: <%=biller.localTransactionFee%></p>
+                </div>
+              </div>
+        <%})%>
+    </main>
+  </body>
+</html>
